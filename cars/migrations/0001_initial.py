@@ -18,6 +18,7 @@ class Migration(migrations.Migration):
                 ('make', models.CharField(max_length=120)),
                 ('model', models.CharField(max_length=120)),
                 ('year', models.IntegerField()),
+                
             ],
         ),
     ]
