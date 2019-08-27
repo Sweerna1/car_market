@@ -34,7 +34,7 @@ def car_update(request, car_id):
 	car_obj = Car.objects.get(id=car_id)
 	form = CarForm(instance=car_obj)
 	if request.method == "POST":
-		form = CarForm(request.POST, instance=car_obj)
+		form = CarForm(request.POST, request.FILES, instance=car_obj)
 		if form.is_valid():
 			form.save()
 			return redirect('car-list')
